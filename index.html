@@ -4,22 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>V-Kost Purwakarta | Premium & Exclusive Modern Living</title>
-    <meta name="description" content="V-Kost Purwakarta: Hunian kost eksklusif dengan fasilitas AC, WiFi kencang, Keamanan 24 Jam, dan Free Snack.">
+    <title>V-KOST Purwakarta | Premium & Exclusive Modern Living</title>
+    <meta name="description" content="V-Kost Purwakarta menawarkan hunian kost eksklusif dengan fasilitas AC, WiFi kencang, Keamanan 24 Jam, dan Free Snack. Lokasi strategis untuk profesional & mahasiswa.">
+    <meta name="keywords" content="kost purwakarta, v-kost, kost eksklusif purwakarta, kost mewah purwakarta, sewa kost murah purwakarta, vkost.my.id">
+    <link rel="canonical" href="https://www.vkost.my.id" />
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vkost.my.id">
+    <meta property="og:title" content="V-KOST Purwakarta | Premium & Exclusive Living">
+    <meta property="og:description" content="Hunian kost modern dengan fasilitas lengkap di Purwakarta. Cek ketersediaan kamar sekarang!">
+    <meta property="og:image" content="https://www.vkost.my.id/Kost.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "V-KOST Purwakarta",
+      "image": "https://www.vkost.my.id/Kost.jpg",
+      "@id": "https://www.vkost.my.id",
+      "url": "https://www.vkost.my.id",
+      "telephone": "+6289650060125",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Purwakarta",
+        "addressLocality": "Purwakarta",
+        "addressRegion": "Jawa Barat",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
     <style>
         :root {
-            --gold: #d4af37;
-            --gold-light: #f1d279;
-            --dark: #0b0b0b;
-            --dark-soft: #161616;
+            --gold: #c5a059;
+            --gold-light: #e2c285;
+            --dark: #0f0f0f;
+            --dark-soft: #1a1a1a;
             --white: #ffffff;
-            --muted: #a0a0a0;
-            --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --muted: #888888;
+            --transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -27,7 +53,7 @@
         body {
             background: var(--dark);
             color: var(--white);
-            line-height: 1.6;
+            line-height: 1.7;
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
         }
@@ -36,14 +62,14 @@
         nav {
             position: fixed;
             top: 0; width: 100%;
-            padding: 15px 5%;
+            padding: 20px 8%;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(11, 11, 11, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
         }
 
         .logo {
@@ -52,101 +78,107 @@
             font-weight: 700;
             color: var(--gold);
             text-decoration: none;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url("Kost.jpg") center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(15,15,15,1)), url("Kost.jpg") center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
         }
 
         .hero-content h1 { 
             font-family: 'Cormorant Garamond', serif; 
-            font-size: clamp(3rem, 10vw, 5.5rem); 
-            line-height: 1.1;
-            margin-bottom: 10px;
+            font-size: clamp(3rem, 12vw, 7rem); 
+            line-height: 0.9;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: -2px;
         }
 
         .hero-content p { 
             color: var(--gold); 
-            font-size: clamp(0.9rem, 3vw, 1.1rem); 
-            letter-spacing: 4px; 
+            font-size: clamp(0.8rem, 2.5vw, 1rem); 
+            letter-spacing: 8px; 
             text-transform: uppercase; 
-            margin-bottom: 35px;
+            margin-bottom: 50px;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
-        /* --- GLOBAL LAYOUT --- */
-        .container { max-width: 1200px; margin: auto; padding: 80px 24px; }
-        
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: clamp(2.2rem, 5vw, 3.2rem); 
-            font-weight: 600;
-        }
-        .section-title span { color: var(--gold); font-style: italic; }
-        .section-title::after {
-            content: ''; display: block; width: 50px; height: 2px; background: var(--gold); margin: 15px auto;
-        }
-
+        /* --- BUTTONS --- */
         .btn {
-            padding: 16px 35px;
-            background: var(--gold);
-            color: #000;
-            border-radius: 2px;
-            font-weight: 700;
+            padding: 18px 40px;
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            font-weight: 600;
             text-decoration: none;
             display: inline-block;
             transition: var(--transition);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-        }
-        .btn:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.3); }
-
-        /* --- FACILITIES --- */
-        .facilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        .facility-card {
-            background: var(--dark-soft);
-            padding: 45px 30px;
-            border: 1px solid rgba(255,255,255,0.03);
-            text-align: center;
-            transition: var(--transition);
-        }
-        .facility-card:hover { border-color: var(--gold); background: #1a1a1a; transform: translateY(-5px); }
-        .facility-card h4 { color: var(--gold); margin-bottom: 12px; font-size: 1.1rem; letter-spacing: 1px; }
-        .facility-card p { font-size: 0.9rem; color: var(--muted); }
-
-        /* --- GALLERY (SWIPEABLE & POPUP) --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(2, 250px);
-            gap: 15px;
-        }
-
-        .gallery-item {
+            letter-spacing: 3px;
+            font-size: 0.8rem;
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
         }
 
-        .gallery-item img, .gallery-item video {
-            width: 100%; height: 100%; object-fit: cover; transition: var(--transition);
+        /* --- SECTIONS --- */
+        .container { max-width: 1200px; margin: auto; padding: 100px 24px; }
+        
+        .section-title { text-align: center; margin-bottom: 80px; }
+        .section-title h2 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-weight: 600; 
+            margin-bottom: 15px;
+        }
+        .section-title span { color: var(--gold); font-style: italic; }
+        .section-title::after { 
+            content: ''; display: block; width: 50px; height: 1px; 
+            background: var(--gold); margin: 20px auto; 
         }
 
-        /* Layout Grid Variasi (Laptop) */
+        /* --- FACILITIES --- */
+        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .facility-card {
+            background: #151515; 
+            padding: 60px 40px; 
+            border: 1px solid rgba(255,255,255,0.05); 
+            text-align: center; 
+            transition: var(--transition);
+        }
+        .facility-card:hover { 
+            background: #1e1e1e;
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+        .facility-card h4 { 
+            color: var(--gold); 
+            margin-bottom: 15px; 
+            font-size: 1.1rem; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+        }
+        .facility-card p { font-size: 0.9rem; color: var(--muted); font-weight: 300; }
+
+        /* --- GALLERY --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 350px); gap: 20px; }
+        .gallery-item { position: relative; overflow: hidden; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
+        .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+        
         .gallery-item:nth-child(1) { grid-column: span 3; }
         .gallery-item:nth-child(2) { grid-column: span 3; }
         .gallery-item:nth-child(3) { grid-column: span 2; }
@@ -155,76 +187,170 @@
 
         @media (max-width: 768px) {
             .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
-            .gallery-item:nth-child(n) { grid-column: span 1; height: 200px; }
-            .gallery-item:nth-child(1) { grid-column: span 2; height: 250px; }
+            .gallery-item:nth-child(n) { grid-column: span 1; height: 250px; }
+            .gallery-item:nth-child(1) { grid-column: span 2; height: 350px; }
         }
 
         .gallery-item .overlay {
-            position: absolute; inset: 0; background: rgba(0,0,0,0.4);
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: 0.3s ease;
+            position: absolute; inset: 0; background: rgba(15,15,15,0.7); 
+            display: flex; align-items: center; justify-content: center; 
+            opacity: 0; transition: 0.5s ease; backdrop-filter: blur(3px);
         }
         .gallery-item:hover .overlay { opacity: 1; }
         .gallery-item:hover img { transform: scale(1.08); }
-        .video-icon { font-size: 2.5rem; color: var(--gold); filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
 
         /* --- TESTIMONIALS --- */
-        .slider-container { overflow: hidden; margin-top: 20px; }
-        .slider-track { display: flex; transition: var(--transition); }
-        .testi-card { min-width: 100%; padding: 10px; }
+        .slider-container { overflow: hidden; position: relative; }
+        .slider-track { display: flex; transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1); }
+        .testi-card { min-width: 100%; padding: 0 10px; }
         @media (min-width: 768px) { .testi-card { min-width: 33.33%; } }
+        
         .testi-box {
-            background: var(--dark-soft); padding: 40px; border-radius: 4px;
-            border-bottom: 2px solid var(--gold); height: 100%;
+            background: #151515; padding: 40px; border-left: 1px solid var(--gold); height: 100%;
         }
-        .testi-box p { font-style: italic; color: #ccc; margin-bottom: 20px; font-size: 0.95rem; }
-        .testi-box strong { color: var(--gold); font-size: 0.85rem; letter-spacing: 1px; }
+        .testi-box p { font-style: italic; color: #bbb; margin-bottom: 25px; font-size: 0.9rem; font-weight: 300; }
+        .testi-box strong { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* --- MAPS --- */
-        .map-wrapper { border-radius: 12px; overflow: hidden; border: 1px solid rgba(212,175,55,0.3); }
+        /* --- UPGRADED DARK & GOLD MAP --- */
+.map-section {
+    position: relative;
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.map-container-mewah {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.map-wrapper {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    /* Memberikan tone warna gelap-emas yang mewah */
+    filter: grayscale(100%) invert(90%) contrast(1.2) opacity(0.7);
+    transition: var(--transition);
+}
+
+/* Overlay untuk menambah kesan kedalaman warna */
+.map-container-mewah::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    background: rgba(197, 160, 89, 0.05); /* Sedikit bias emas */
+    pointer-events: none;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+/* Saat di-hover, peta kembali ke warna asli agar user bisa baca jalan */
+.map-container-mewah:hover .map-wrapper {
+    filter: grayscale(0%) invert(0%) contrast(1) opacity(1);
+}
+
+.map-container-mewah:hover::before {
+    background: transparent;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-overlay-info {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: rgba(15, 15, 15, 0.95);
+    padding: 30px;
+    border-left: 3px solid var(--gold);
+    max-width: 320px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.4);
+}
+
+.map-overlay-info h4 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.map-overlay-info p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .map-overlay-info { 
+        position: relative; 
+        bottom: 0; 
+        left: 0; 
+        max-width: 100%; 
+        margin: 10px;
+        background: var(--dark-soft);
+    }
+    .map-wrapper { height: 350px; }
+}
 
         /* --- CTA BOX --- */
-        .cta-box {
-            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-            padding: 80px 30px; border: 1px solid var(--gold);
-            text-align: center; position: relative; overflow: hidden;
+        .cta-box { 
+            padding: 100px 30px; 
+            border: 1px solid rgba(197, 160, 89, 0.3); 
+            text-align: center;
+            background: linear-gradient(to bottom, #111, #0f0f0f);
         }
 
         /* --- FLOATING WA --- */
         .wa-float {
-            position: fixed; bottom: 25px; right: 25px;
-            background: #25D366; width: 55px; height: 55px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            z-index: 2000; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: 0.3s;
+            position: fixed; bottom: 30px; right: 30px; 
+            background: #25D366; width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; 
+            z-index: 2000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
+            transition: 0.4s;
         }
-        .wa-float:hover { transform: scale(1.1) rotate(10deg); }
+        .wa-float:hover { transform: scale(1.1) translateY(-5px); }
 
-        /* --- ANIMATION --- */
-        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
+        /* --- ANIMATIONS --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+
+        footer { padding: 80px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer p { font-size: 0.65rem; letter-spacing: 4px; color: #555; text-transform: uppercase; }
     </style>
 </head>
 
 <body>
 
 <nav>
-    <a href="#" class="logo">V-KOST</a>
-    <a href="#lokasi" style="color: var(--white); text-decoration: none; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;"></a>
+    <a href="https://www.vkost.my.id" class="logo">V-KOST</a>
 </nav>
 
 <section class="hero">
     <div class="hero-content reveal">
+        <p>Refined Comfort</p>
         <h1>Modern Luxury<br>Living</h1>
-        <p>Exclusive Residence • Purwakarta</p>
-        <a href="https://wa.me/6289650060125" class="btn">Check Availability</a>
+        <a href="https://wa.me/6289650060125?text=Halo%20V-Kost%20Purwakarta%2C%20Mohon%20info%20ketersediaan%20kamar.%20Apakah%20masih%20Available?" 
+           target="_blank" rel="noopener" class="btn">Check Availability</a>
     </div>
 </section>
 
 <section class="container reveal">
-    <div style="text-align: center; max-width: 750px; margin: auto;">
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 20px; color: var(--gold);">Kenyamanan Prioritas Kami</h3>
-        <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
-            V-Kost bukan sekadar tempat menginap. Kami memberikan pengalaman hunian kelas atas dengan desain interior modern dan fasilitas lengkap yang dirancang khusus untuk mahasiswa dan kaum profesional.
+    <div style="text-align: center; max-width: 800px; margin: auto;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 30px; color: var(--gold);">The New Standard of Living</h3>
+        <p style="color: var(--muted); font-size: 1.1rem; font-weight: 300;">
+            V-Kost menghadirkan hunian eksklusif yang dirancang khusus untuk kenyamanan maksimal. 
+            Perpaduan desain minimalis modern dengan layanan premium menciptakan harmoni sempurna 
+            bagi istirahat dan produktivitas Anda.
         </p>
     </div>
 </section>
@@ -234,123 +360,123 @@
         <h2>Premium <span>Facilities</span></h2>
     </div>
     <div class="facilities-grid">
-        <div class="facility-card"><h4>Koneksi WiFi</h4><p>High speed internet untuk produktivitas tanpa batas.</p></div>
-        <div class="facility-card"><h4>Full AC</h4><p>Sirkulasi udara optimal dan pendingin ruangan yang sejuk.</p></div>
-        <div class="facility-card"><h4>Private Bath</h4><p>Kamar mandi dalam bersih dengan sanitasi modern.</p></div>
-        <div class="facility-card"><h4>Complimentary</h4><p>Free Coffee, Teh, dan Snack setiap hari untuk Anda.</p></div>
+        <div class="facility-card"><h4>High-Speed WiFi</h4><p>Koneksi fiber optic stabil untuk kebutuhan work from home.</p></div>
+        <div class="facility-card"><h4>Full Air Con</h4><p>Sistem pendingin udara mutakhir di setiap sudut ruang pribadi.</p></div>
+        <div class="facility-card"><h4>Private Bathroom</h4><p>Kamar mandi dalam dengan desain modern dan higienis.</p></div>
+        <div class="facility-card"><h4>Complimentary</h4><p>Layanan snack, kopi, dan teh gratis setiap hari bagi penghuni.</p></div>
     </div>
 </section>
 
 <section class="container reveal">
     <div class="section-title">
-        <h2>Room <span>Gallery</span></h2>
+        <h2>Visual <span>Gallery</span></h2>
     </div>
     <div class="gallery-grid">
         <a href="room1.jpg" class="glightbox gallery-item" data-gallery="room-v">
-            <img src="room1.jpg" alt="Interior V-Kost 1">
-            <div class="overlay"><span>VIEW DETAILS</span></div>
+            <img src="room1.jpg" alt="Interior Kamar V-Kost">
+            <div class="overlay"><span style="letter-spacing: 3px; font-size: 0.7rem;">ENLARGE</span></div>
         </a>
         <a href="room2.jpg" class="glightbox gallery-item" data-gallery="room-v">
-            <img src="room2.jpg" alt="Interior V-Kost 2">
-            <div class="overlay"><span>VIEW DETAILS</span></div>
+            <img src="room2.jpg" alt="Fasilitas Kost">
+            <div class="overlay"><span style="letter-spacing: 3px; font-size: 0.7rem;">ENLARGE</span></div>
         </a>
         <a href="room3.jpg" class="glightbox gallery-item" data-gallery="room-v">
-            <img src="room3.jpg" alt="Interior V-Kost 3">
-            <div class="overlay"><span>VIEW DETAILS</span></div>
+            <img src="room3.jpg" alt="V-Kost Living">
+            <div class="overlay"><span style="letter-spacing: 3px; font-size: 0.7rem;">ENLARGE</span></div>
         </a>
         <a href="room-video.mp4" class="glightbox gallery-item" data-gallery="room-v">
             <video src="room-video.mp4" muted loop autoplay playsinline></video>
-            <div class="overlay"><span class="video-icon">▶</span></div>
+            <div class="overlay"><span style="font-size: 2rem; color: var(--gold);">▶</span></div>
         </a>
         <a href="room4.jpg" class="glightbox gallery-item" data-gallery="room-v">
-            <img src="room4.jpg" alt="Interior V-Kost 4">
-            <div class="overlay"><span>VIEW DETAILS</span></div>
+            <img src="room4.jpg" alt="V-Kost Residence">
+            <div class="overlay"><span style="letter-spacing: 3px; font-size: 0.7rem;">ENLARGE</span></div>
         </a>
     </div>
 </section>
 
 <section class="container reveal">
     <div class="section-title">
-        <h2>Living <span>Experience</span></h2>
+        <h2>Our <span>Residents</span></h2>
     </div>
     <div class="slider-container">
         <div class="slider-track" id="sliderTrack">
-            <div class="testi-card"><div class="testi-box"><p>"Fasilitasnya sangat lengkap, kebersihannya terjaga. Paling suka sama free snacknya!"</p><strong>DEWI, KARYAWATI</strong></div></div>
-            <div class="testi-card"><div class="testi-box"><p>"Desain kamarnya sangat aesthetic, bikin betah kalau harus lembur kerja di kost."</p><strong>THIRZA, PROFESIONAL</strong></div></div>
-            <div class="testi-card"><div class="testi-box"><p>"Keamanan terjamin dan penjaganya sangat membantu. Parkirannya juga luas."</p><strong>VALDI, KARYAWAN</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Fasilitas sangat lengkap, kebersihan terjaga. Paling suka sama free snacknya!"</p><strong>- DEWI, KARYAWATI</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Desain kamarnya sangat aesthetic, bikin betah kalau harus lembur kerja di kost."</p><strong>- THIRZA, PROFESIONAL</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Keamanan terjamin dan penjaganya sangat membantu. Parkirannya juga luas."</p><strong>- VALDI, KARYAWAN</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"WiFi-nya super kencang, gak pernah buffering buat kerja. Kost terbaik."</p><strong>- RAUL, DEVELOPER</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Lingkungannya tenang, cocok buat yang butuh istirahat maksimal."</p><strong>- AMANDA, MEDIS</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Proses check-in mudah dan harganya sangat worth it dengan fasilitas premium."</p><strong>- FAJAR, PENGUSAHA</strong></div></div>
         </div>
     </div>
 </section>
 
-<section id="lokasi" class="container reveal">
+
+<section class="map-section reveal">
     <div class="section-title">
-        <h2>Strategically <span>Located</span></h2>
+        <h2>Strategic <span>Location</span></h2>
     </div>
-    <div class="map-wrapper">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.364667268282!2d107.48182493753406!3d-6.4288081454760535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e696d0051a647ff%3A0x6c533779e9e7e1bc!2sV-Kost!5e0!3m2!1sid!2sid!4v1769005075613!5m2!1sid!2sid" 
-            width="100%" 
-            height="450" 
-            style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.8);" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <div class="map-container-mewah">
+        <div class="map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.364667268282!2d107.48182493753406!3d-6.4288081454760535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e696d0051a647ff%3A0x6c533779e9e7e1bc!2sV-Kost!5e0!3m2!1sid!2sid!4v1769005075613!5m2!1sid!2sid" 
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="map-overlay-info">
+            <h4>V-KOST Residence</h4>
+            <p>Berada tepat di jantung kawasan strategis Purwakarta, memudahkan mobilitas Anda ke tempat bekerja maupun pusat perbelanjaan.</p>
+            <div style="margin-top: 20px; font-size: 0.8rem; color: var(--gold); border-top: 1px solid rgba(197,160,89,0.2); pt: 15px; padding-top: 15px;">
+                <strong>📍 ALAMAT:</strong><br>
+                Perum Kopo Permai Gg. Dukuh Blok E 120, Cikopo, Purwakarta.
+            </div>
+        </div>
     </div>
 </section>
+
+
 
 <section class="container reveal">
     <div class="cta-box">
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; margin-bottom: 10px;">Ready to Move In?</h2>
-        <p style="color: var(--muted); margin-bottom: 35px; letter-spacing: 1px;">Dapatkan harga spesial untuk pemesanan minggu ini.</p>
-        <a href="https://wa.me/6289650060125?text=Halo%20V-Kost%2C%20saya%20ingin%20info%20kamar." class="btn">Hubungi Via WhatsApp</a>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 20px;">Secure Your Space</h2>
+        <p style="color: var(--muted); margin-bottom: 40px; letter-spacing: 3px; text-transform: uppercase; font-size: 0.8rem;">Limited Units Available for this Month</p>
+        <a href="https://wa.me/6289650060125?text=Halo%20V-Kost%20Purwakarta%2C%20Mohon%20info%20ketersediaan%20kamar.%20Apakah%20masih%20Available?" 
+           target="_blank" rel="noopener" class="btn">Book via WhatsApp</a>
     </div>
 </section>
 
-<footer style="padding: 50px 20px; text-align: center; border-top: 1px solid #222; font-size: 0.8rem; letter-spacing: 2px; color: #555;">
-    <p>© <span id="year"></span> V-KOST PURWAKARTA. ALL RIGHTS RESERVED.</p>
+<footer>
+    <p>©<span id="year"> </span>V-Kost|All Right Reserved </p>
 </footer>
 
-<a href="https://wa.me/6289650060125" class="wa-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28" alt="Chat">
+<a href="https://wa.me/6289650060125?text=Halo%20V-Kost%20Purwakarta%2C%20Mohon%20info%20ketersediaan%20kamar.%20Apakah%20masih%20Available?" 
+   class="wa-float" target="_blank" rel="noopener">
+    <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.942-.001-3.841-.48-5.538-1.391l-6.459 1.699zm12.035-20.247c-4.647 0-8.424 3.776-8.428 8.425 0 1.748.533 3.4 1.539 4.793l.115.185-1.017 3.71 3.794-.995.179.105c1.348.799 2.887 1.22 4.46 1.221h.004c4.647 0 8.425-3.776 8.428-8.425 0-2.253-.876-4.371-2.467-5.963-1.591-1.591-3.711-2.468-5.963-2.468zm4.837 11.554c-.265-.134-1.57-.774-1.813-.863-.242-.089-.419-.134-.596.134-.177.269-.683.863-.837 1.041-.154.178-.308.2-.573.067-.265-.135-1.119-.414-2.131-1.32-.787-.702-1.317-1.57-1.473-1.838-.155-.269-.017-.414.117-.547.121-.121.265-.31.398-.465.133-.155.177-.266.265-.445.088-.178.044-.334-.022-.469-.066-.134-.596-1.439-.817-1.972-.215-.519-.434-.448-.596-.456-.154-.008-.33-.01-.506-.01-.176 0-.463.066-.705.334-.242.266-.925.905-.925 2.208s.947 2.56 1.08 2.738c.132.178 1.863 2.846 4.512 3.993.63.272 1.12.435 1.503.556.633.201 1.21.173 1.665.105.508-.076 1.57-.642 1.791-1.264.221-.622.221-1.157.154-1.264-.067-.108-.242-.173-.507-.307z"/></svg>
 </a>
 
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
-    // Tahun
     document.getElementById("year").innerText = new Date().getFullYear();
 
-    // GLightbox (Popup Gambar & Video)
-    // Fitur: Swipe aktif, Zoom aktif, Video auto-play
-    const lightbox = GLightbox({
-        touchNavigation: true,
-        loop: true,
-        zoomable: true,
-        autoplayVideos: true,
-        width: '90vw',
-        height: 'auto'
-    });
+    const lightbox = GLightbox({ touchNavigation: true, loop: true, autoplayVideos: true });
 
-    // Reveal on Scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('active');
         });
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Testimonial Auto-Slider (Mobile Only)
     const track = document.getElementById('sliderTrack');
     let index = 0;
     function slide() {
-        if(window.innerWidth < 768) {
-            index = (index + 1) % 3;
-            track.style.transform = `translateX(-${index * 100}%)`;
-        }
+        const itemsPerView = window.innerWidth < 768 ? 1 : 3;
+        const totalItems = 6;
+        const maxScroll = totalItems - itemsPerView + 1;
+        index = (index + 1) % maxScroll;
+        const move = window.innerWidth < 768 ? index * 100 : index * 33.33;
+        track.style.transform = `translateX(-${move}%)`;
     }
     setInterval(slide, 5000);
 </script>
