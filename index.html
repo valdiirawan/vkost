@@ -1,609 +1,358 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="V-Kost Purwakarta – Kost modern premium dengan desain elegan, fasilitas lengkap, dan lokasi strategis.">
-<meta name="author" content="V-Kost">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>V-Kost Purwakarta | Premium & Exclusive Modern Living</title>
+    <meta name="description" content="V-Kost Purwakarta: Hunian kost eksklusif dengan fasilitas AC, WiFi kencang, Keamanan 24 Jam, dan Free Snack.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-<title>V-Kost | Modern Luxury Living</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f1d279;
+            --dark: #0b0b0b;
+            --dark-soft: #161616;
+            --white: #ffffff;
+            --muted: #a0a0a0;
+            --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-<style>
-:root{
-  --gold:#d4af37;
-  --dark:#0b0b0b;
-  --dark-soft:#141414;
-  --text:#f5f5f5;
-  --muted:#9ca3af;
-}
+        body {
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 11, 11, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
 
-body{
-  background:var(--dark);
-  color:var(--text);
-  line-height:1.9;
-  font-family:'Inter',sans-serif;
-}
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
 
-/* NAVBAR */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-  backdrop-filter:blur(12px);
-  background:rgba(0,0,0,.65);
-}
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url("Kost.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-/* GLOBAL */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:120px 24px;
-}
+        .hero-content h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: clamp(3rem, 10vw, 5.5rem); 
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
 
-.section-title{
-  text-align:center;
-  margin-bottom:56px;
-}
+        .hero-content p { 
+            color: var(--gold); 
+            font-size: clamp(0.9rem, 3vw, 1.1rem); 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            margin-bottom: 35px;
+        }
 
-.section-title h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.9rem;
-  font-weight:600;
-  letter-spacing:1.5px;
-}
+        /* --- GLOBAL LAYOUT --- */
+        .container { max-width: 1200px; margin: auto; padding: 80px 24px; }
+        
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: clamp(2.2rem, 5vw, 3.2rem); 
+            font-weight: 600;
+        }
+        .section-title span { color: var(--gold); font-style: italic; }
+        .section-title::after {
+            content: ''; display: block; width: 50px; height: 2px; background: var(--gold); margin: 15px auto;
+        }
 
-.section-title span{
-  color:var(--gold);
-}
+        .btn {
+            padding: 16px 35px;
+            background: var(--gold);
+            color: #000;
+            border-radius: 2px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+        .btn:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.3); }
 
-.section-title p{
-  color:var(--muted);
-  margin-top:10px;
-  letter-spacing:.5px;
-}
+        /* --- FACILITIES --- */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .facility-card {
+            background: var(--dark-soft);
+            padding: 45px 30px;
+            border: 1px solid rgba(255,255,255,0.03);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .facility-card:hover { border-color: var(--gold); background: #1a1a1a; transform: translateY(-5px); }
+        .facility-card h4 { color: var(--gold); margin-bottom: 12px; font-size: 1.1rem; letter-spacing: 1px; }
+        .facility-card p { font-size: 0.9rem; color: var(--muted); }
 
-.btn{
-  padding:16px 46px;
-  background:var(--gold);
-  color:#000;
-  border-radius:999px;
-  font-weight:600;
-  letter-spacing:.5px;
-  text-decoration:none;
-  display:inline-block;
-  box-shadow:0 10px 30px rgba(212,175,55,.35);
-}
+        /* --- GALLERY (SWIPEABLE & POPUP) --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 15px;
+        }
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  background:
-    linear-gradient(180deg,rgba(0,0,0,.75),rgba(0,0,0,.7)),
-    url("Kost.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-}
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
 
-.hero h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:4.8rem;
-  letter-spacing:4px;
-  font-weight:600;
-}
+        .gallery-item img, .gallery-item video {
+            width: 100%; height: 100%; object-fit: cover; transition: var(--transition);
+        }
 
-.hero .tagline{
-  font-size:1.35rem;
-  color:var(--gold);
-  margin-top:16px;
-  letter-spacing:.6px;
-}
+        /* Layout Grid Variasi (Laptop) */
+        .gallery-item:nth-child(1) { grid-column: span 3; }
+        .gallery-item:nth-child(2) { grid-column: span 3; }
+        .gallery-item:nth-child(3) { grid-column: span 2; }
+        .gallery-item:nth-child(4) { grid-column: span 2; }
+        .gallery-item:nth-child(5) { grid-column: span 2; }
 
-.hero .tagline span{
-  display:block;
-  font-size:1rem;
-  color:var(--muted);
-  margin-top:12px;
-}
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+            .gallery-item:nth-child(n) { grid-column: span 1; height: 200px; }
+            .gallery-item:nth-child(1) { grid-column: span 2; height: 250px; }
+        }
 
-/* ABOUT */
-.about{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  color:var(--muted);
-  font-size:1.05rem;
-  letter-spacing:.4px;
-}
+        .gallery-item .overlay {
+            position: absolute; inset: 0; background: rgba(0,0,0,0.4);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: 0.3s ease;
+        }
+        .gallery-item:hover .overlay { opacity: 1; }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .video-icon { font-size: 2.5rem; color: var(--gold); filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
 
-/* FACILITIES */
-.facilities{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:26px;
-}
+        /* --- TESTIMONIALS --- */
+        .slider-container { overflow: hidden; margin-top: 20px; }
+        .slider-track { display: flex; transition: var(--transition); }
+        .testi-card { min-width: 100%; padding: 10px; }
+        @media (min-width: 768px) { .testi-card { min-width: 33.33%; } }
+        .testi-box {
+            background: var(--dark-soft); padding: 40px; border-radius: 4px;
+            border-bottom: 2px solid var(--gold); height: 100%;
+        }
+        .testi-box p { font-style: italic; color: #ccc; margin-bottom: 20px; font-size: 0.95rem; }
+        .testi-box strong { color: var(--gold); font-size: 0.85rem; letter-spacing: 1px; }
 
-.facility{
-  background:linear-gradient(145deg,#151515,#0f0f0f);
-  padding:40px;
-  border-radius:28px;
-  border:1px solid rgba(212,175,55,.35);
-  text-align:center;
-  font-weight:500;
-  letter-spacing:.4px;
-  box-shadow:0 12px 30px rgba(0,0,0,.6);
-}
+        /* --- MAPS --- */
+        .map-wrapper { border-radius: 12px; overflow: hidden; border: 1px solid rgba(212,175,55,0.3); }
 
-/* GALLERY */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:24px;
-}
+        /* --- CTA BOX --- */
+        .cta-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            padding: 80px 30px; border: 1px solid var(--gold);
+            text-align: center; position: relative; overflow: hidden;
+        }
 
-.gallery-item{
-  aspect-ratio:1/1;
-  border-radius:24px;
-  overflow:hidden;
-  cursor:pointer;
-  position:relative;
-}
+        /* --- FLOATING WA --- */
+        .wa-float {
+            position: fixed; bottom: 25px; right: 25px;
+            background: #25D366; width: 55px; height: 55px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            z-index: 2000; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: 0.3s;
+        }
+        .wa-float:hover { transform: scale(1.1) rotate(10deg); }
 
-.gallery-item img,
-.gallery-item video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.6s ease;
-}
-
-.gallery-item:hover img,
-.gallery-item:hover video{
-  transform:scale(1.08);
-}
-
-.video-badge{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:3rem;
-  background:rgba(0,0,0,.45);
-  color:var(--gold);
-}
-
-/* LIGHTBOX */
-.lightbox{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.95);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:2000;
-}
-
-.lightbox.active{display:flex}
-
-.lightbox img,
-.lightbox video{
-  max-width:90%;
-  max-height:90%;
-  border-radius:24px;
-}
-
-/* TESTIMONI */
-.testimoni-section{
-  padding:100px 24px;
-  background:radial-gradient(circle at top,#151515,#000);
-  overflow:hidden;
-}
-
-.testimoni-slider{
-  display:flex;
-  gap:24px;
-  transition:transform .8s ease-in-out;
-}
-
-.testimoni-card{
-  min-width:calc(33.333% - 16px);
-  background:linear-gradient(145deg,#0f0f0f,#161616);
-  border-radius:24px;
-  padding:28px;
-  border:1px solid rgba(212,175,55,.45);
-  box-shadow:0 14px 36px rgba(0,0,0,.75);
-}
-
-.profile{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:18px;
-  padding-bottom:10px;
-  border-bottom:1px solid rgba(212,175,55,.35);
-}
-
-.profile .name{
-  font-weight:600;
-  letter-spacing:.4px;
-}
-
-.profile .age{
-  font-size:.85rem;
-  color:var(--gold);
-  letter-spacing:.3px;
-}
-
-.testimoni-card ul{
-  list-style:none;
-}
-
-.testimoni-card li{
-  padding-left:24px;
-  margin-bottom:12px;
-  position:relative;
-  color:#eaeaea;
-  letter-spacing:.4px;
-}
-
-.testimoni-card li::before{
-  content:"●";
-  position:absolute;
-  left:0;
-  color:var(--gold);
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero h1{font-size:3.4rem}
-  .testimoni-card{min-width:100%}
-}
-
-/* MAP */
-.map iframe{
-  width:100%;
-  height:420px;
-  border-radius:28px;
-  border:0;
-}
-
-/* CTA */
-.cta{
-  background:linear-gradient(135deg,#151515,#000);
-  padding:90px 40px;
-  border-radius:48px;
-  text-align:center;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px;
-  color:var(--muted);
-  font-size:.9rem;
-  letter-spacing:.4px;
-}
-
-/* WA FLOAT */
-.wa-float{
-  position:fixed;
-  bottom:24px;
-  right:24px;
-  width:64px;
-  height:64px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:1500;
-}
-
-.wa-float img{width:34px}
-
-/* REVEAL */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:.8s ease;
-}
-
-.reveal.active{
-  opacity:1;
-  transform:none;
-}
-</style>
+        /* --- ANIMATION --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
 
 <body>
 
+<nav>
+    <a href="#" class="logo">V-KOST</a>
+    <a href="#lokasi" style="color: var(--white); text-decoration: none; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;"></a>
+</nav>
 
-
-<!-- HERO -->
 <section class="hero">
-  <div class="container reveal">
-    <h1>V-Kost</h1>
-    <p class="tagline">
-      Modern Luxury Living
-      <span>Hunian kost premium dengan desain elegan dan ketenangan maksimal di Purwakarta.</span>
-    </p>
-    <br>
-    <a href="https://wa.me/6289650060125?text=Halo%20V-Kost%20%0ASaya%20tertarik%20dengan%20kamar%20kost%20premium%20di%20Purwakarta.%0AMohon%20info%20harga%20dan%20ketersediaannya.%20Terima%20kasih.
-" target="_blank" class="btn">Chat WhatsApp</a>
-  </div>
+    <div class="hero-content reveal">
+        <h1>Modern Luxury<br>Living</h1>
+        <p>Exclusive Residence • Purwakarta</p>
+        <a href="https://wa.me/6289650060125" class="btn">Check Availability</a>
+    </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="container reveal">
-  <div class="section-title">
-    <h2>Tentang <span>V-Kost</span></h2>
-    <p>Elegan • Tenang • Premium</p>
-  </div>
-  <p class="about">
-    V-Kost bukan sekadar tempat tinggal, tetapi ruang hidup eksklusif yang dirancang
-    untuk profesional modern yang mengutamakan kenyamanan, privasi, dan estetika.
-  </p>
-</section>
-
-<!-- FACILITIES -->
 <section class="container reveal">
-  <div class="section-title">
-    <h2>Fasilitas <span>Unggulan</span></h2>
-  </div>
-  <div class="facilities">
-    <div class="facility">Kamar Mandi Dalam</div>
-    <div class="facility">AC & Ventilasi Optimal</div>
-    <div class="facility">WiFi Cepat & Stabil</div>
-    <div class="facility">Keamanan 24 Jam</div>
-    <div class="facility">Dapur Bersama</div>
-    <div class="facility">Free Indomie, Air Galon, Teh & Kopi</div>
-    <div class="facility">Free Snack</div>
-    <div class="facility">Tempat Nongkrong Luas</div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="container reveal">
-  <div class="section-title">
-    <h2>Gallery <span>Kamar</span></h2>
-  </div>
-
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="room1.jpg"></div>
-    <div class="gallery-item"><img src="room2.jpg"></div>
-    <div class="gallery-item"><img src="room3.jpg"></div>
-    <div class="gallery-item"><img src="room4.jpg"></div>
-    <div class="gallery-item"><img src="room5.jpg"></div>
-    <div class="gallery-item"><img src="room6.jpg"></div>
-    <div class="gallery-item"><img src="room7.jpg"></div>
-
-    <div class="gallery-item">
-      <video src="room-video.mp4" muted></video>
-      <div class="video-badge">▶</div>
+    <div style="text-align: center; max-width: 750px; margin: auto;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 20px; color: var(--gold);">Kenyamanan Prioritas Kami</h3>
+        <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
+            V-Kost bukan sekadar tempat menginap. Kami memberikan pengalaman hunian kelas atas dengan desain interior modern dan fasilitas lengkap yang dirancang khusus untuk mahasiswa dan kaum profesional.
+        </p>
     </div>
-  </div>
 </section>
 
-<!-- TESTIMONI -->
 <section class="container reveal">
-  <div class="section-title">
-  <h2 class="section-title">
-  Apa Kata <span class="gold-text">Penghuni</span>
-</h2>
-
-
-  <div class="slider-wrapper">
-    <div class="testimoni-slider" id="testimoniSlider">
-
-      <div class="testimoni-card">
-        <div class="profile">
-          <span class="name">Ari (Head of K3)</span>
-          <span class="age">26 Tahun</span>
-        </div>
-        <ul>
-          <li>Kamar bersih dan nyaman</li>
-          <li>AC dingin & berfungsi dengan baik</li>
-          <li>WiFi stabil untuk kerja</li>
-          <li>Lingkungan aman & tenang</li>
-        </ul>
-      </div>
-
-      <div class="testimoni-card">
-        <div class="profile">
-          <span class="name">Reni (Karyawan K3)</span>
-          <span class="age">24 Tahun</span>
-        </div>
-        <ul>
-          <li>Penjaga ramah dan responsif</li>
-          <li>Dapur bersama selalu bersih</li>
-          <li>Air galon selalu tersedia</li>
-          <li>Akses lokasi strategis</li>
-        </ul>
-      </div>
-
-      <div class="testimoni-card">
-        <div class="profile">
-          <span class="name">Budi</span>
-          <span class="age">29 Tahun</span>
-        </div>
-        <ul>
-          <li>Kos terasa seperti rumah sendiri</li>
-          <li>Tempat parkir luas</li>
-          <li>Harga sesuai fasilitas</li>
-          <li>Rekomendasi untuk pekerja & mahasiswa</li>
-        </ul>
-      </div>
-       <div class="testimoni-card">
-    <div class="profile">
-      <span class="name">Dewi</span>
-      <span class="age">27 Tahun</span>
+    <div class="section-title">
+        <h2>Premium <span>Facilities</span></h2>
     </div>
-    <ul>
-      <li>Lingkungan nyaman</li>
-      <li>Tetangga ramah</li>
-      <li>Internet cepat</li>
-      <li>Keamanan bagus</li>
-    </ul>
-  </div>
-
-  <div class="testimoni-card">
-    <div class="profile">
-      <span class="name">Sule</span>
-      <span class="age">31 Tahun</span>
+    <div class="facilities-grid">
+        <div class="facility-card"><h4>Koneksi WiFi</h4><p>High speed internet untuk produktivitas tanpa batas.</p></div>
+        <div class="facility-card"><h4>Full AC</h4><p>Sirkulasi udara optimal dan pendingin ruangan yang sejuk.</p></div>
+        <div class="facility-card"><h4>Private Bath</h4><p>Kamar mandi dalam bersih dengan sanitasi modern.</p></div>
+        <div class="facility-card"><h4>Complimentary</h4><p>Free Coffee, Teh, dan Snack setiap hari untuk Anda.</p></div>
     </div>
-    <ul>
-      <li>Tempat tenang</li>
-      <li>AC dingin</li>
-      <li>Cocok kerja remote</li>
-      <li>Harga masuk akal</li>
-    </ul>
-  </div>
-
-  <div class="testimoni-card">
-    <div class="profile">
-      <span class="name">Sari</span>
-      <span class="age">23 Tahun</span>
-    </div>
-    <ul>
-      <li>Bersih</li>
-      <li>Aman</li>
-      <li>Nyaman</li>
-      <li>Pelayanan cepat</li>
-    </ul>
-  </div>
-   <div class="testimoni-card">
-    <div class="profile">
-      <span class="name">Asep</span>
-      <span class="age">27 Tahun</span>
-    </div>
-    <ul>
-      <li>Lingkungan nyaman</li>
-      <li>Tetangga ramah</li>
-      <li>Internet cepat</li>
-      <li>Keamanan bagus</li>
-    </ul>
-  </div>
-
-  <div class="testimoni-card">
-    <div class="profile">
-      <span class="name">Brian</span>
-      <span class="age">31 Tahun</span>
-    </div>
-    <ul>
-      <li>Tempat tenang</li>
-      <li>AC dingin</li>
-      <li>Cocok kerja remote</li>
-      <li>Harga masuk akal</li>
-    </ul>
-  </div>
-
-  <div class="testimoni-card">
-    <div class="profile">
-      <span class="name">Saripin</span>
-      <span class="age">23 Tahun</span>
-    </div>
-    <ul>
-      <li>Bersih</li>
-      <li>Aman</li>
-      <li>Nyaman</li>
-      <li>Pelayanan cepat</li>
-    </ul>
-  </div>
-
-    </div>
-  </div>
 </section>
 
+<section class="container reveal">
+    <div class="section-title">
+        <h2>Room <span>Gallery</span></h2>
+    </div>
+    <div class="gallery-grid">
+        <a href="room1.jpg" class="glightbox gallery-item" data-gallery="room-v">
+            <img src="room1.jpg" alt="Interior V-Kost 1">
+            <div class="overlay"><span>VIEW DETAILS</span></div>
+        </a>
+        <a href="room2.jpg" class="glightbox gallery-item" data-gallery="room-v">
+            <img src="room2.jpg" alt="Interior V-Kost 2">
+            <div class="overlay"><span>VIEW DETAILS</span></div>
+        </a>
+        <a href="room3.jpg" class="glightbox gallery-item" data-gallery="room-v">
+            <img src="room3.jpg" alt="Interior V-Kost 3">
+            <div class="overlay"><span>VIEW DETAILS</span></div>
+        </a>
+        <a href="room-video.mp4" class="glightbox gallery-item" data-gallery="room-v">
+            <video src="room-video.mp4" muted loop autoplay playsinline></video>
+            <div class="overlay"><span class="video-icon">▶</span></div>
+        </a>
+        <a href="room4.jpg" class="glightbox gallery-item" data-gallery="room-v">
+            <img src="room4.jpg" alt="Interior V-Kost 4">
+            <div class="overlay"><span>VIEW DETAILS</span></div>
+        </a>
+    </div>
+</section>
 
+<section class="container reveal">
+    <div class="section-title">
+        <h2>Living <span>Experience</span></h2>
+    </div>
+    <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+            <div class="testi-card"><div class="testi-box"><p>"Fasilitasnya sangat lengkap, kebersihannya terjaga. Paling suka sama free snacknya!"</p><strong>DEWI, KARYAWATI</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Desain kamarnya sangat aesthetic, bikin betah kalau harus lembur kerja di kost."</p><strong>THIRZA, PROFESIONAL</strong></div></div>
+            <div class="testi-card"><div class="testi-box"><p>"Keamanan terjamin dan penjaganya sangat membantu. Parkirannya juga luas."</p><strong>VALDI, KARYAWAN</strong></div></div>
+        </div>
+    </div>
+</section>
 
-<!-- LOKASI -->
 <section id="lokasi" class="container reveal">
-  <div class="section-title">
-    <h2>Lokasi <span>Kami</span></h2>
-  </div>
-
-  <div class="maps-badge">
-    <div>⭐⭐⭐⭐⭐ 5.0 | Google Reviews</div>
-  </div>
-
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19514.128378463673!2d107.467392!3d-6.4229115!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e696d0051a647ff%3A0x6c533779e9e7e1bc!2sV-Kost!5e1!3m2!1sid!2sid!4v1768922287771!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    <div class="section-title">
+        <h2>Strategically <span>Located</span></h2>
+    </div>
+    <div class="map-wrapper">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.364667268282!2d107.48182493753406!3d-6.4288081454760535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e696d0051a647ff%3A0x6c533779e9e7e1bc!2sV-Kost!5e0!3m2!1sid!2sid!4v1769005075613!5m2!1sid!2sid" 
+            width="100%" 
+            height="450" 
+            style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.8);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 </section>
 
-<!-- CTA -->
 <section class="container reveal">
-  <div class="cta">
-    <h2>Info Harga & Ketersediaan</h2>
-    <p>Hubungi kami langsung melalui WhatsApp.</p><br>
-    <a href="https://wa.me/6289650060125?text=Halo%20V-Kost%20%0ASaya%20tertarik%20dengan%20kamar%20kost%20premium%20di%20Purwakarta.%0AMohon%20info%20harga%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" class="btn">Chat WhatsApp</a>
-  </div>
+    <div class="cta-box">
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; margin-bottom: 10px;">Ready to Move In?</h2>
+        <p style="color: var(--muted); margin-bottom: 35px; letter-spacing: 1px;">Dapatkan harga spesial untuk pemesanan minggu ini.</p>
+        <a href="https://wa.me/6289650060125?text=Halo%20V-Kost%2C%20saya%20ingin%20info%20kamar." class="btn">Hubungi Via WhatsApp</a>
+    </div>
 </section>
 
-<footer>
-  © <span id="year"></span> V-Kost. All Rights Reserved.
+<footer style="padding: 50px 20px; text-align: center; border-top: 1px solid #222; font-size: 0.8rem; letter-spacing: 2px; color: #555;">
+    <p>© <span id="year"></span> V-KOST PURWAKARTA. ALL RIGHTS RESERVED.</p>
 </footer>
 
-<div class="lightbox" id="lightbox"></div>
-
-<a href="https://wa.me/6289650060125?text=Halo%20V-Kost%20%0ASaya%20tertarik%20dengan%20kamar%20kost%20premium%20di%20Purwakarta.%0AMohon%20info%20harga%20dan%20ketersediaannya.%20Terima%20kasih." target="_blank" class="wa-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<a href="https://wa.me/6289650060125" class="wa-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28" alt="Chat">
 </a>
 
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
 <script>
-document.getElementById("year").innerText=new Date().getFullYear();
+    // Tahun
+    document.getElementById("year").innerText = new Date().getFullYear();
 
-document.addEventListener("scroll",()=>{
-  document.querySelectorAll(".reveal").forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight-80){
-      el.classList.add("active");
+    // GLightbox (Popup Gambar & Video)
+    // Fitur: Swipe aktif, Zoom aktif, Video auto-play
+    const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+        autoplayVideos: true,
+        width: '90vw',
+        height: 'auto'
+    });
+
+    // Reveal on Scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Testimonial Auto-Slider (Mobile Only)
+    const track = document.getElementById('sliderTrack');
+    let index = 0;
+    function slide() {
+        if(window.innerWidth < 768) {
+            index = (index + 1) % 3;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
     }
-  });
-});
-
-const lb=document.getElementById("lightbox");
-document.querySelectorAll(".gallery-item").forEach(item=>{
-  item.onclick=()=>{
-    lb.innerHTML="";
-    const media=item.querySelector("img,video").cloneNode(true);
-    if(media.tagName==="VIDEO"){media.controls=true;media.autoplay=true}
-    lb.appendChild(media);
-    lb.classList.add("active");
-  }
-});
-lb.onclick=()=>{lb.classList.remove("active");lb.innerHTML=""};
-
-let i=0;
-const track=document.getElementById("testiTrack");
-setInterval(()=>{
-  i=(i+1)%3;
-  track.style.transform=`translateX(-${i*100}%)`;
-},4500);
- const slider = document.getElementById("testimoniSlider");
-  const cards = slider.children;
-  let index = 0;
-
-  function autoSlide() {
-    const cardWidth = cards[0].offsetWidth + 24;
-    index++;
-
-    if (index > cards.length - 1) {
-      index = 0;
-    }
-
-    slider.style.transform = `translateX(-${index * cardWidth}px)`;
-  }
-
-  setInterval(autoSlide, 3500); // geser tiap 3.5 detik
+    setInterval(slide, 5000);
 </script>
 
 </body>
